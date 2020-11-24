@@ -20,10 +20,10 @@ input {
     transform: rotate(0deg);
   }
   33% {
-    transform: rotate(5deg);
+    transform: rotate(7deg);
   }
   66% {
-    transform: rotate(-5deg);
+    transform: rotate(-7deg);
   }
   100% {
     transform: rotate(0deg);
@@ -35,8 +35,4 @@ h1.wiggle {
   animation: name duration timing-function delay iteration-count direction
     fill-mode;
   animation: wiggle 0.7s 0s none;
-}
-
-h1.wiggle:hover {
-  animation: none;
 }
