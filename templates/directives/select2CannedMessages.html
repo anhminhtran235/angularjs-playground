@@ -1,0 +1,10 @@
+<div>
+  <select ng-attr-id="{{uniqueHtmlId}}" multiple="multiple"></select>
+  <input
+    placeholder="Enter new reason"
+    ng-keypress="keyPress($event)"
+    ng-model="input"
+    maxlength="{{maxMessageLength ? maxMessageLength : 100000000}}"
+  />
+  <button ng-click="addNewMessage()">Add Message</button>
+</div>

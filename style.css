@@ -1,0 +1,16 @@
+body {
+  padding: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+  width: 400px !important;
+}
+
+input {
+  display: block;
+  width: 400px;
+}
