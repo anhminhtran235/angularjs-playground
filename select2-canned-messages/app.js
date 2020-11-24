@@ -1,4 +1,4 @@
-/// <reference path="library/angular.min.js" />
+/// <reference path="../library/angular.min.js" />
 
 const myApp = angular.module('myApp', ['select2CannedMessagesDirective']);
 

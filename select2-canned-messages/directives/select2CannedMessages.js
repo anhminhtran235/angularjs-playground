@@ -12,7 +12,7 @@ angular
         maxMessageLength: '=',
       },
       replace: true,
-      templateUrl: '../templates/directives/select2CannedMessages.html',
+      templateUrl: 'templates/directives/select2CannedMessages.html',
       controller: [
         '$scope',
         function ($scope) {
