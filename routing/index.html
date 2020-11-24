@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="routingApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Angularjs library -->
+    <script src="../library/angular.min.js"></script>
+    <script src="../library/angular-route.min.js"></script>
+
+    <!-- App.js -->
+    <script src="app.js"></script>
+
+    <!-- Controllers -->
+    <script src="./controllers/mainController.js"></script>
+    <script src="./controllers/firstController.js"></script>
+    <script src="./controllers/secondController.js"></script>
+
+    <title>Angularjs Routing</title>
+  </head>
+  <body>
+    <a href="#!/main">Main</a>
+    <a href="#!/first">First</a>
+    <a href="#!/second">Second</a>
+    <ng-view></ng-view>
+  </body>
+</html>
