@@ -14,3 +14,29 @@ input {
   display: block;
   width: 400px;
 }
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(5deg);
+  }
+  66% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+h1.wiggle {
+  display: inline-block;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+  animation: wiggle 0.7s 0s none;
+}
+
+h1.wiggle:hover {
+  animation: none;
+}
