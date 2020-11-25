@@ -1,0 +1,80 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  margin: 30px 60px;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+
+.form-control {
+  width: 100%;
+  position: relative;
+  margin-top: 15px;
+  box-shadow: 0 5px 81px 0 rgba(62, 57, 107, 0.11);
+}
+
+.form-control:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: #0668ff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.form-control:active,
+.form-control:focus,
+.form-control:hover {
+  box-shadow: 0 5px 81px 0 rgba(85, 79, 143, 0.21);
+  transition: 0.3s;
+}
+
+.inside-control {
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 5px;
+  border: none;
+}
+
+.inside-control:focus {
+  outline: none;
+}
+
+.inside-control::-webkit-input-placeholder,
+.inside-control option::-webkit-input-placeholder {
+  font-style: italic;
+  font-family: sans-serif !important;
+}
+
+.form-control select,
+.inside-control option {
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+.form-control select {
+}
