@@ -1,0 +1,59 @@
+* {
+    font-family: Montserrat;
+    box-sizing: border-box;
+}
+
+/* Utilities */
+.blue {
+    color: #0F69FF;
+}
+
+.red {
+    color: #ff6363;
+}
+
+.green {
+    color: #28CD41;
+}
+
+.yellow {
+    color: #FaAB2EE8;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.email-tracking-tooltip {
+    opacity: 0;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), 0 -18px 60px -10px rgba(0,0,0,.025);
+    width: 285px;
+    transition: all 0.3s;
+    position: absolute;
+    text-align: left;
+    left: 108%;
+    top: 12px;
+}
+
+.email-section {
+    font-size: 11px;
+    line-height: 10px;
+}
+
+.section-header {
+    font-weight: 700;
+}
+
+.section-content {
+    padding-left: 7px;
+}
+
+.hover-display:hover + .email-tracking-tooltip{
+    opacity: 1;
+}
