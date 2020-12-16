@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="emailTrackerApp">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="http://127.0.0.1:3000/socket.io/socket.io.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+        <script src="library/angular.min.js"></script>
+        <script src="app.js"></script>
+        <title>Chat app</title>
+    </head>
+    <body ng-controller="mainController">
+        <div class="container">
+            <input type="file" id="imageUpload" name="imageUpload"/>
+            <button ng-click="uploadImage()">Add image</button>
+            <h3 class=" text-center">Messaging</h3>
+            <div class="messaging">
+                <div class="inbox_msg">
+                    <div class="inbox_people">
+                    <div class="headind_srch">
+                        <div class="recent_heading">
+                        <h4>Recent</h4>
+                        </div>
+                        <div class="srch_bar">
+                        <div class="stylish-input-group">
+                            <input type="text" class="search-bar"  placeholder="Search" >
+                            <span class="input-group-addon">
+                            <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                            </span> </div>
+                        </div>
+                    </div>
+                    <div class="inbox_chat">
+                        <div class="chat_list active_chat">
+                        <div class="chat_people">
+                            <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                            <div class="chat_ib">
+                            <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                            <p>Test, which is a new approach to have all solutions 
+                                astrology under one roof.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="chat_list">
+                        <div class="chat_people">
+                            <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                            <div class="chat_ib">
+                            <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                            <p>Test, which is a new approach to have all solutions 
+                                astrology under one roof.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="mesgs">
+                    <div class="msg_history">
+                        <div ng-repeat="msg in messages">
+                            <div class="incoming_msg" ng-if="msg.from==='other'">
+                                <div>
+                                    <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="received_msg">
+                                        <div class="received_withd_msg">
+                                            <p ng-if="msg.type==='text'">{{msg.data}}</p>
+                                            <img src="{{msg.data}}" alt="Image" ng-if="msg.type==='image'">
+                                            <span class="time_date"> 11:01 AM    |    June 9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="outgoing_msg" ng-if="msg.from==='me'">
+                                <div class="sent_msg">
+                                    <p ng-if="msg.type==='text'">{{msg.data}}</p>
+                                    <img src="{{msg.data}}" alt="Image" ng-if="msg.type==='image'">
+                                    <span class="time_date"> 11:01 AM    |    June 9</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="type_msg">
+                        <div class="input_msg_write">
+                        <input type="text" class="write_msg" placeholder="Type a message" ng-model="newMessage" ng-keypress="keypress($event)"/>
+                        <button class="msg_send_btn" type="button" ng-click="sendMessage()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

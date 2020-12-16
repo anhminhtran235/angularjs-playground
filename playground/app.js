@@ -1,15 +1,12 @@
-const selected = document.querySelector('.selected');
-const optionsContainer = document.querySelector('.select-options');
+/// <reference path="../library/angular.min.js"/>
 
-const optionsList = document.querySelectorAll('.option');
-
-selected.addEventListener('click', () => {
-  optionsContainer.classList.toggle('active');
-});
-
-optionsList.forEach((o) => {
-  o.addEventListener('click', () => {
-    selected.innerHTML = o.querySelector('label').innerHTML;
-    optionsContainer.classList.remove('active');
-  });
-});
+const app = angular.module('myApp', []);
+app.controller('mainController', ['$scope', function ($scope) {
+  $scope.colors = [
+    { name: 'yellow' },
+    { name: 'red' },
+    { name: 'green' },
+    { name: 'blue' }
+  ];
+  $scope.defaultColor = $scope.colors[0].name;
+}])
